@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+
+body, button, p{
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  border-radius: .5rem  ;
+  background: #FFF;
+  box-shadow: 0rem 2rem 5rem 0rem rgba(0, 0, 0, 0.80); 
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+  width: min(42.8rem, 90%) ;
+  text-align: center;
+}
+
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #34355B;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #34355B;
+  margin-top: 1.6rem;
+}
+
+.img-cookie {
+  animation: balance;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  cursor: pointer;
+  animation-duration: 25ms;
+  place-self: center;
+}
+
+.img-cookie:hover {
+  animation-play-state: running;
+}
+
+
+
+img {
+  margin-top: 2.6rem;
+  display: block;
+  width: 100%;
+}
+
+
+.btn-opencookies {
+  color: #FFF;
+  background-color: #ff9500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.6rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+
+
+
+.p-msg {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+  line-height: 2.88rem;
+  text-align: center;
+  font-size: 2.4rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(85, 85, 85, 0.5);
+  background: #E4EDF1;
+  animation: msgBoxAnimation;
+  animation-duration: 1.2s;
+  padding: 1rem;
+  
+}
+
+@keyframes msgBoxAnimation{
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+    background-position: 100% 50%;
+	}
+	100% {
+    background-position: 0% 50%;
+	}
+  
+}
+
+@keyframes balance {
+    0% {
+      transform: rotate(-2deg);
+  
+       }
+  
+    100% {
+       transform: rotate(2deg);
+    }
+  }
